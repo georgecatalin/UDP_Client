@@ -7,11 +7,8 @@
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "cJSON.h"
-#include "json_sample.h"
 #include "udp_client.h"
+#include "play_with_JSON.h"
 
 int supports_full_hd(const char * monitor);
 
