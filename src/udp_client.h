@@ -17,7 +17,11 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
+#include "macro_definitions.h"
+#include "get_JSON_from_sources.h"
 
 int client_listen_udp(char *host_address, short unsigned port_number);
+char *get_user_input();
 
 #endif /* UDP_CLIENT_H_ */
+

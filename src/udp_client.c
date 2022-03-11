@@ -6,13 +6,12 @@
  */
 
 #include "udp_client.h"
-#include "macro_definitions.h"
 
 int client_listen_udp(char *host_address, short unsigned port_number)
 {
 	int socket_file_descriptor=0;
 	char buffer[MAXLINES];
-	char *hello="Hello, I am the client and you are supposed to service my requests.";
+	char *hello=enter_JSON_from_keyboard();
 
 	struct sockaddr_in server_address;
 	struct sockaddr_in client_address;
@@ -74,3 +73,5 @@ int client_listen_udp(char *host_address, short unsigned port_number)
 
 	return EXIT_SUCCESS;
 }
+
+

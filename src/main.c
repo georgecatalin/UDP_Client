@@ -9,8 +9,7 @@
 
 #include "udp_client.h"
 #include "play_with_JSON.h"
-
-int supports_full_hd(const char * monitor);
+#include "get_JSON_from_sources.h"
 
 int main(int argc, char **argv)
 {
@@ -27,7 +26,14 @@ int main(int argc, char **argv)
 	port_number=atoi(argv[2]);
     host_address=argv[1];
 
-	client_listen_udp(host_address, port_number);
+    char *my_string=enter_JSON_from_keyboard();
+    printf("Ok. I got \t >> %s. \n",my_string);
+
+    for(;;)
+    {
+    	client_listen_udp(host_address, port_number);
+    }
+
 
 	return EXIT_SUCCESS;
 }

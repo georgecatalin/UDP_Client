@@ -66,8 +66,10 @@ int supports_full_hd( char * monitor)
 
 void do_stuff()
 {
+		char *json_string;
+
 		//How to parse a JSON String
-		cJSON *json=cJSON_Parse(sample);
+		cJSON *json=cJSON_Parse(json_string);
 
 		//How to print the JSON File
 		char *this_string=cJSON_Print(json);
@@ -77,7 +79,7 @@ void do_stuff()
 		//How to free the allocated memory to handle the json object
 		cJSON_Delete(json);
 
-		if(supports_full_hd(sample))
+		if(supports_full_hd(json_string))
 			{
 			puts("Indeed, it is a HD monitor.");
 			}
